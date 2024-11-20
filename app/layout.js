@@ -11,6 +11,14 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const enchantedLand = localFont({
+  src: "./fonts/EnchantedLand.otf",
+  variable: "--font-enchanted-land",
+});
+const colchester = localFont({
+  src: "./fonts/Colchester.ttf",
+  variable: "--font-colchester",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -20,9 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} ${enchantedLand.variable} ${colchester.variable}`}>
         {children}
       </body>
     </html>
